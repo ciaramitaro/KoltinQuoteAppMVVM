@@ -5,7 +5,7 @@ class FakeDatabase private constructor(){
     //holder of all objects
     val quoteDao = FakeDatabase()
 
-
+//Singleton instantiation
     companion object{
 
         //Volatile makes it accessible by other threads.
