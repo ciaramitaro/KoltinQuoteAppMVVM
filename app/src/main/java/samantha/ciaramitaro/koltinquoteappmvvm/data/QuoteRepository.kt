@@ -1,6 +1,8 @@
 package samantha.ciaramitaro.koltinquoteappmvvm.data
 
 //WHERE LOGIC GOES between databases and ViewModels!!!
+//We are doing dependency injections instead of creating them in the objects
+//to make everything more modular
 class QuoteRepository private constructor(private val quoteDao: FakeQuoteDao){
 
     fun addQuote(quote : Quote){
