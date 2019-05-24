@@ -18,5 +18,4 @@ class FakeDatabase private constructor(){
                     instance?: FakeDatabase().also { instance = it }
                 }
     }
-
 }

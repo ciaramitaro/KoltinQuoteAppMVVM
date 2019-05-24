@@ -14,7 +14,7 @@ class FakeQuoteDao {
     fun addQuote(quote: Quote){
         quoteList.add(quote)
         //This updates the observable value with updated list
-        //which will trigger all the obervers of this mutableLive Data of List holding type Quote
+        //which will trigger all the observers of this mutableLive Data of List holding type Quote
         quotes.value = quoteList
     }
     //Casting quotes to be LiveData because we don't want it to be mutable outside DAO class
