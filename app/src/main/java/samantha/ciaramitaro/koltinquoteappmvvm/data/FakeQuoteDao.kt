@@ -1,5 +1,6 @@
 package samantha.ciaramitaro.koltinquoteappmvvm.data
 
+import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 
 class FakeQuoteDao {
@@ -12,7 +13,10 @@ class FakeQuoteDao {
     }
     fun addQuote(quote: Quote){
         quoteList.add(quote)
-        //This updates the obersvable
+        //This updates the observable value with updated list
+        //which will trigger all the obervers of this mutableLive Data of List holding type Quote
         quotes.value = quoteList
     }
+    //Casting quotes to be LiveData because we don't want it to be mutable outside DAO class
+    fun getQuote()= quotes as LiveData<List<Quote>>
 }
