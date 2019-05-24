@@ -3,7 +3,7 @@ package samantha.ciaramitaro.koltinquoteappmvvm.data
 class FakeDatabase private constructor(){
 
     //holder of all objects
-    val quoteDao = FakeDatabase()
+    val quoteDao = FakeQuoteDao()
 
 //Singleton instantiation
     companion object{
